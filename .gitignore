@@ -4,3 +4,6 @@
 
 # Large Everyday Image Files, may need to re-add
 everydays/*
+
+# Temporary Generated Files
+imagePaths.txt
