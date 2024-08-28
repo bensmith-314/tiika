@@ -32,7 +32,7 @@ p {
     gap: 10px;
     margin: 0 auto; /* Centers the grid horizontally */
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: rgb(10, 20, 30);
 }
 
@@ -49,7 +49,7 @@ p {
 /* NAVIGATION */
 nav {
     background-color: rgb(10, 20, 30);
-    border-radius: 4px;
+    border-radius: 5px;
     max-width: 780px;
     margin: 0 auto;
 }
