@@ -82,6 +82,30 @@ nav ul li a:hover {
     background-color: rgb(20, 30, 40);
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    vertical-align: auto;
+    padding-bottom: 3px;
+}
+
+@media (max-width: 500px) {
+    .navlink {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav ul {
+        justify-content: space-between; /* Space between links and hamburger */
+        align-items: center; /* Vertically center items */
+    }
+}
+
 /* LINKS */
 /* unvisited link */
 a:link {
