@@ -11,4 +11,4 @@ files.reverse()
 
 with open("imagePaths.txt", "w") as newFile:
     for file in files:
-        newFile.write(f"<img src=\"{file}\">\n")
+        newFile.write(f"<img src=\"/{file}\">\n")
