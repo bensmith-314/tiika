@@ -46,6 +46,58 @@ p {
     text-align: center;
 }
 
+/* EVERYDAY ART PIECE IMAGE PAGES*/
+.everyday-image-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.everyday-image {
+    max-width: 780px;
+    width: 100%;
+    height: auto;
+}
+
+div.image-navigation {
+    background-color: rgb(10, 20, 30);
+    border-radius: 5px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+div.image-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.image-navigation ul li {
+    flex: 1; /* Make each item take up equal space */
+    text-align: center; /* Center the text in each list item */
+}
+
+div.image-navigation ul li:first-child {
+    text-align: left; /* Left align the first item */
+}
+
+div.image-navigation ul li:last-child {
+    text-align: right; /* Right align the last item */
+}
+
+div.image-navigation ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav.image-navigation ul li a:hover {
+    background-color: rgb(20, 30, 40);
+}
+
 /* NAVIGATION */
 nav {
     background-color: rgb(10, 20, 30);
