@@ -63,6 +63,7 @@ div.image-navigation {
     border-radius: 5px;
     max-width: 780px;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 div.image-navigation ul {
