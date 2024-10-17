@@ -44,7 +44,7 @@ for x in range(1, count_files_in_directory(directory_path)):
 
     # Determines the next art piece and if it is the final one
     nextPiece = x + 1
-    if nextPiece > count_files_in_directory(directory_path):
+    if nextPiece > (count_files_in_directory(directory_path) + 1):
         finalPiece = True
     else: 
         finalPiece = False
@@ -110,7 +110,7 @@ for x in range(1, count_files_in_directory(directory_path)):
                 <li>
             """)
     if not finalPiece:
-        f.write(f"<a href=\"{prepend_zeros(nextPiece)}.html\">&laquo; Next</a>")
+        f.write(f"<a href=\"{prepend_zeros(nextPiece)}.html\">Next</a>")
     f.write("""
                 </li>
                 <li>
@@ -120,7 +120,7 @@ for x in range(1, count_files_in_directory(directory_path)):
             
     """)
     if not firstPiece:
-        f.write(f"<a href=\"{prepend_zeros(previousPiece)}.html\">Previous &raquo;</a>")
+        f.write(f"<a href=\"{prepend_zeros(previousPiece)}.html\">Previous</a>")
     f.write("""
 
                 </li>
