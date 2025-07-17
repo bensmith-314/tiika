@@ -1,39 +1,117 @@
+:root {
+    --max-width: 780px;
+    --color-bg: rgb(30, 40, 50);
+    --color-bg-dark: rgb(10, 20, 30);
+    --color-bg-hover: rgb(20, 30, 40);
+    --color-text: white;
+    --color-link-hover: lightskyblue;
+    --color-link-active: cornflowerblue;
+    --corner-radius: 5px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(30, 40, 50);
-    /* background-color: rgb(83, 100, 116); */
-    color: white;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-logo {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    max-height: 50px;
+}
+
+main {
+    flex: 1; /* This makes the content area grow to fill available space */
 }
 
 h1 {
-    max-width: 780px;
+    max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
     margin-bottom: 10px;
     margin-top: 25px;
+    /* font-size: clamp(1.75rem, 4vw, 2.5rem); */
+}
+
+h2 {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+h3 {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 hr {
-    max-width: 780px;
+    max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
 p {
-    max-width: 780px;
+    max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
     margin-bottom: 10px;
     line-height: 30px;
 }
 
+img {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+ul {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+    list-style-position: inside;
+}
+
+figure {
+   display: block;
+   margin: 0 auto;
+   max-width: 100%;
+   max-width: min(450px, calc(100% - 20px));
+   margin-bottom: 10px;
+}
+
+figure.hero-image {
+    max-width: min(var(--max-width), calc(100% - 20px));
+}
+
+figure img {
+   vertical-align: top;                 
+}
+figure figcaption {
+   text-align: left;
+   padding: 10px;
+   background-color: var(--color-bg-dark);
+   border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+}
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    max-width: 760px;
+    max-width: min(calc(var(--max-width) - 20px), calc(100% - 40px));
     gap: 10px;
     margin: 0 auto; /* Centers the grid horizontally */
     padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(10, 20, 30);
+    border-radius: var(--corner-radius);
+    background-color: var(--color-bg-dark);
 }
 
 .image-grid img {
@@ -48,28 +126,26 @@ p {
 
 /* EVERYDAY ART PIECE IMAGE PAGES*/
 .everyday-image-container {
-    max-width: 780px;
+    max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
 }
 
 .everyday-image {
-    max-width: 780px;
     width: 100%;
     height: auto;
 }
 
 div.image-navigation {
-    background-color: rgb(10, 20, 30);
-    border-radius: 5px;
-    max-width: 780px;
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
     margin: 0 auto;
     margin-top: 10px;
 }
 
 div.image-navigation ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,26 +160,54 @@ div.image-navigation ul li:first-child {
     text-align: left; /* Left align the first item */
 }
 
-div.image-navigation ul li:last-child {
+div.image-navigation ul li:last-child a {
     text-align: right; /* Right align the last item */
+    padding-right: 0px;
 }
 
 div.image-navigation ul li a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     padding: 14px 20px;
     display: block;
 }
 
-nav.image-navigation ul li a:hover {
-    background-color: rgb(20, 30, 40);
+div.image-navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Image Info */
+div.art-info-container {
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+div.art-info-container ul {
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+div.art-info-container ul li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+div.art-info-container ul li:first-child {
+    padding-top: 15px;
+}
+
+div.art-info-container ul li:last-child {
+    padding-bottom: 15px;
 }
 
 /* NAVIGATION */
 nav {
-    background-color: rgb(10, 20, 30);
-    border-radius: 5px;
-    max-width: 780px;
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
+    max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
 }
 
@@ -125,23 +229,30 @@ nav ul img {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     padding: 14px 20px;
     display: block;
 }
 
 nav ul li a:hover {
-    background-color: rgb(20, 30, 40);
+    background-color: var(--color-bg-hover);
+    border-radius: var(--corner-radius);
 }
 
 .hamburger-menu {
     display: none;
     font-size: 24px;
-    color: white;
+    color: var(--color-text);
     cursor: pointer;
     vertical-align: auto;
-    padding-bottom: 3px;
+}
+
+.hamburger-menu a {
+        padding-top: 9px;
+        padding-left: 14px;
+        padding-bottom: 8px;
+        padding-right: 14px;
 }
 
 .mobile-menu {
@@ -177,21 +288,110 @@ nav ul li a:hover {
 /* LINKS */
 /* unvisited link */
 a:link {
-    color: white;
+    color: var(--color-text);
     font-weight: bold;
 }
   
 /* visited link */
 a:visited {
-    color: white;
+    color: var(--color-text);
 }
   
 /* mouse over link */
 a:hover {
-    color: lightskyblue;
+    color: var(--color-link-hover);
 }
   
 /* selected link */
 a:active {
-    color: cornflowerblue;
+    color: var(--color-link-active);
+}
+
+
+footer {
+    background-color: var(--color-bg-dark); /* match your nav and image grid */
+    color: var(--color-text);
+    text-align: center;
+    padding-top: 5px;
+    font-size: 14px;
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100%;
+    border-top-left-radius: var(--corner-radius);
+    border-top-right-radius: var(--corner-radius);
+}
+
+
+footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin: 0px;
+}
+
+footer a:hover {
+    color: var(--color-link-hover); /* lightskyblue */
+}
+
+div.home-page-art-container {
+    display: flex;
+    gap: 10px;
+    max-width: min(var(--max-width) - 20px, calc(100% - 40px));
+    margin: 0 auto;
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
+    padding: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+div.home-page-art-image {
+    display: flex;
+    align-items: center; /* Vertically center image within this wrapper */
+}
+
+div.home-page-art-image img {
+    max-width: min(150px, 30vw);
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+div.home-page-art-text {
+    flex: 1;
+    /* Default block layout keeps content top-aligned */
+}
+
+div.home-page-art-text h2,
+div.home-page-art-text p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+div.home-page-art-text p {
+    padding-top: 10px;
+}
+
+div.home-page-article-container {
+    max-width: min(var(--max-width) - 20px, calc(100% - 40px));
+    margin: 0 auto;
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
+    padding: 10px;
+    margin-top: 15px;   
+}
+
+div.home-page-article-container h2, 
+div.home-page-article-container p {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+div.home-page-article-container p {
+    margin-bottom: 0px;
+}
+
+div.home-page-article-container img {
+    margin-top: 10px;
 }
