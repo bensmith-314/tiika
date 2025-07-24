@@ -96,8 +96,8 @@ p + ul li {
     max-width: min(var(--max-width), calc(100% - 40px));
     margin: 0 auto;
     margin-bottom: 10px;
-    line-height: 1.5em;
     padding-left: .5em;
+    line-height: 1.8em;
 }
 
 img {
