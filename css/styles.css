@@ -56,6 +56,24 @@ h3 {
     margin-bottom: 10px;
 }
 
+h4 {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+h5 {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+h6 {
+    max-width: min(var(--max-width), calc(100% - 20px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
 hr {
     max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
