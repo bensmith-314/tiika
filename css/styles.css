@@ -84,7 +84,20 @@ p {
     max-width: min(var(--max-width), calc(100% - 20px));
     margin: 0 auto;
     margin-bottom: 10px;
-    line-height: 30px;
+    line-height: 1.8em;
+}
+
+p + ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+p + ul li {
+    max-width: min(var(--max-width), calc(100% - 40px));
+    margin: 0 auto;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    padding-left: .5em;
 }
 
 img {
@@ -193,6 +206,7 @@ div.image-navigation ul li a {
 div.image-navigation ul li a:hover {
     text-decoration: underline;
 }
+
 
 /* Image Info */
 div.art-info-container {
@@ -404,7 +418,6 @@ div.home-page-article-container p {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 
 div.home-page-article-container p {
     margin-bottom: 0px;
