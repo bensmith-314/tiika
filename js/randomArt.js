@@ -1,5 +1,8 @@
+// *Magic* number that needs to be dyanmically updated needs to be current day
+// If today is day 2000 then the number needs to be 2000 to get range 1 - 2000
+
 function randomArtPiece() {
-    const randomIndex = Math.floor(Math.random() * 1782); // Needs to be dynamically updated when generated
+    const randomIndex = Math.floor(Math.random() * 1782) + 1; // Needs to be dynamically updated when generated
     window.location.href = `${randomIndex}`;
 }
 
