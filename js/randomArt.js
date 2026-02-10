@@ -2,7 +2,7 @@
 // If today is day 2000 then the number needs to be 2000 to get range 1 - 2000
 
 function randomArtPiece() {
-    const randomIndex = Math.floor(Math.random() * 1786) + 1; // Needs to be dynamically updated when generated
+    const randomIndex = Math.floor(Math.random() * 1787) + 1; // Needs to be dynamically updated when generated
     window.location.href = `${randomIndex}`;
 }
 
