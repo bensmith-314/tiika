@@ -218,7 +218,7 @@ div.art-info-container {
 
 div.art-info-container ul {
     margin-bottom: 0px;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 div.art-info-container ul li {
@@ -232,6 +232,21 @@ div.art-info-container ul li:first-child {
 }
 
 div.art-info-container ul li:last-child {
+    padding-bottom: 15px;
+}
+
+/* Art Caption */
+div.art-caption-container {
+    background-color: var(--color-bg-dark);
+    border-radius: var(--corner-radius);
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+div.art-caption-container p {
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-top: 15px;
     padding-bottom: 15px;
 }
 
