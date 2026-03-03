@@ -265,6 +265,10 @@ nav ul {
     display: flex;
 }
 
+nav ul.desktop-menu {
+    max-width: 100%;
+}
+
 nav ul li {
     margin-right: 20px;
 }
