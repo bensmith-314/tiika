@@ -169,8 +169,11 @@ figure figcaption {
 div.image-navigation {
     background-color: var(--color-bg-dark);
     border-radius: var(--corner-radius);
+    max-width: var(--max-width);
     margin: 0 auto;
     margin-top: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 div.image-navigation ul {
@@ -178,35 +181,73 @@ div.image-navigation ul {
     padding: 0px;
     margin: 0px;
     display: flex;
+    max-width: min(var(--max-width), calc(100% - 40px));
+    padding-left: 20px;
     justify-content: space-between;
     align-items: center;
 }
 
 div.image-navigation ul li {
-    flex: 1; /* Make each item take up equal space */
-    text-align: center; /* Center the text in each list item */
+    white-space: nowrap;
 }
 
 div.image-navigation ul li:first-child {
-    text-align: left; /* Left align the first item */
+    text-align: left;
 }
 
-div.image-navigation ul li:last-child a {
-    text-align: right; /* Right align the last item */
-    padding-right: 0px;
+div.image-navigation ul li:last-child {
+    text-align: right;
 }
 
 div.image-navigation ul li a {
     color: var(--color-text);
     text-decoration: none;
-    padding: 14px 20px;
-    display: block;
 }
 
 div.image-navigation ul li a:hover {
     text-decoration: underline;
 }
 
+/* Mobile: 2x2 grid */
+@media (max-width: 350px) {
+    div.image-navigation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    div.image-navigation ul li {
+        white-space: normal;
+    }
+    
+    /* First row: Previous and Next */
+    div.image-navigation ul li:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+        padding-bottom: 15px;
+        text-align: left;
+    }
+    
+    div.image-navigation ul li:nth-child(4) {
+        grid-column: 2;
+        grid-row: 1;
+        padding-bottom: 15px;
+        text-align: right;
+    }
+    
+    /* Second row: Gallery and Random */
+    div.image-navigation ul li:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: left;
+    }
+    
+    div.image-navigation ul li:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: right;
+    }
+}
 
 /* Image Info */
 div.art-info-container {
