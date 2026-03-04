@@ -185,10 +185,12 @@ div.image-navigation ul {
     padding-left: 20px;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Add this */
 }
 
 div.image-navigation ul li {
     white-space: nowrap;
+    flex: 0 0 auto; /* Add this - prevents Safari from resizing items */
 }
 
 div.image-navigation ul li:first-child {
